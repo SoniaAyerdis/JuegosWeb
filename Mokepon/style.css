@@ -70,6 +70,12 @@ input {
     display: none;
 }
 
+input:checked + label {
+    background-color: #5d8bf4;
+    color: white;
+    width: 180px;
+}
+
 #seleccionar-ataque {
     flex-direction: column;
     justify-content: center;
@@ -86,12 +92,12 @@ input {
     border-radius: 20px;
     width: 100px;
     border-color: transparent;
-    color: black;
+    color: white;
     font-family: 'poppins', sans-serif;
 }
 
 #mensajes {
-    width: 280%;
+    width: 240px;
     background-color: #11468f;
     border-radius: 20px;
     display: flex;
