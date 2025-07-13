@@ -90,7 +90,7 @@ input:checked + label {
     margin: 10px;
     border: 1px solid #11468f;
     border-radius: 20px;
-    width: 100px;
+    width: 80px;
     border-color: transparent;
     color: white;
     font-family: 'poppins', sans-serif;
@@ -112,6 +112,8 @@ input:checked + label {
     border: transparent;
     color: #041562;
     font-family: 'poppins', sans-serif;
+    border-radius: 20px;
+    width: 100px
 }
 
 .ataques {
@@ -131,6 +133,38 @@ input:checked + label {
     align-items: center;
 }
 
+
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button{
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-family: 'poppins', sans-serif;
+    margin: 10px 0;
+}
+
+/* Tablet: entre 361px y 768px */
+@media (min-width: 361px) and (max-width: 768px) {
+    .tarjetas, .tarjetas-ataques {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tarjetaMokepon {
+        width: 45%; /* 2 por fila */
+    }
+}
+
 @media (max-width: 360px) {
     .tarjetas {
         flex-direction: column;
@@ -140,4 +174,13 @@ input:checked + label {
         flex-direction: column;
         align-items: center;
     } 
+
+}
+
+@media (max-width: 560px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }

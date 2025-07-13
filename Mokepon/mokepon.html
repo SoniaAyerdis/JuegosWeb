@@ -3,7 +3,7 @@
     <head>
         <title>Mokepon!</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -13,40 +13,28 @@
 
             <h2 class="subtitulo">Elige a tu mascota:</h2>
 
-            <div  class="tarjetas">
-                <input type="radio" name="mascota" id="Hipodoge" >
-                <label class="tarjetaMokepon" for="Hipodoge">
-                    <p>Hipodoge</p>
-                    <img src="asset/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge">
-                </label>
-                
-                <input type="radio" name="mascota" id="Capipego" >
-                <label class="tarjetaMokepon" for="Capipego">
-                    <p>Capipego</p>
-                    <img src="asset/mokepons_mokepon_capipepo_attack.png" alt="Capipego">
-                </label>
-                
-                <input type="radio" name="mascota" id="Ratigueya" >
-                <label class="tarjetaMokepon" for="Ratigueya">
-                    <p>Ratigueya</p>
-                    <img src="asset/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
-                </label>
-                
-            </div>
+            <div  id="contenedor-tarjetas" class="tarjetas"></div>
 
             <button id="boton-mascota">Seleccionar</button>
         </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <div>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            </div>
+        </section >
 
         <section id="seleccionar-ataque">
             <h1 class="titulo">Mokepon</h1>
 
             <h2>Elige tu ataque:</h2>
 
-            <div class="tarjetas-ataques">
-                <button id="btnFuego" class="btnAtaque">Fuego 🔥</button>
-                <button id="btnAgua" class="btnAtaque">Agua 💧</button>
-                <button id="btnTierra" class="btnAtaque">Tierra 🏝️</button>
-            </div>
+            <div id="contenedorAtaques" class="tarjetas-ataques"></div>
 
             <div id="mensajes">
                 <p id="resultado">Mucha Suerte</p>
@@ -58,12 +46,12 @@
 
             <div class="ataques">
                 <div class="ataques-jugador">
-                    <p  id="vidas_jugador">3</p>
+                    <p  id="vidas_jugador">0</p>
                     <p id="mascota_jugador"></p>
                     <div id="ataques-del-jugador"></div>
                 </div>
                 <div class="ataques-enemigo">
-                    <p id="vidas_enemigo">3</p>
+                    <p id="vidas_enemigo">0</p>
                     <p id="mascota_enemigo"> </p>
                     <div id="ataques-del-enemigo"></div>             
                 </div>
