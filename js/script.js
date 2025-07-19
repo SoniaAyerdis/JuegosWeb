@@ -61,6 +61,7 @@ if (anchoDelMapa > maxAnchoDelMapa) {
     anchoDelMapa = maxAnchoDelMapa - 20
  }
 
+
 alturaQueBuscamos = anchoDelMapa * 600 / 800
 
 mapa.width = anchoDelMapa
@@ -593,6 +594,13 @@ function revisarColicion (enemigo){
     sectionVerMapa.style.display = 'none'
     seleccionarMascotaEnemigo(enemigo)
 
+
+
+
+
+
+
+    
 }
 
 window.addEventListener('load', iniciarJuego)
